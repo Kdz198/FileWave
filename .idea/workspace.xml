@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="397ce935-28b9-44ab-b73d-bd1781dd0704" name="Changes" comment="update gitignore">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hoangtugio/org/filewave/Config/CloudinaryConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hoangtugio/org/filewave/Controller/FileController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hoangtugio/org/filewave/FileWaveApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hoangtugio/org/filewave/Model/File.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hoangtugio/org/filewave/Repository/FileRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hoangtugio/org/filewave/Service/CloudinaryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hoangtugio/org/filewave/Service/FileService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hoangtugio/org/filewave/FileWaveApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/4629be84-fa3a-45f2-a949-e6474e332236_Conditional Diagram _ Mermaid Chart-2025-07-14-131805.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/5941a928-450f-468c-9d20-c36956fc1b6d_Conditional Diagram _ Mermaid Chart-2025-07-14-131805.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/68a78976-a38b-4bdc-89df-4c5f48977a1b_Conditional Diagram _ Mermaid Chart-2025-07-14-131805.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/6c424fe4-9b3d-4244-a5af-3869b7e6d517_Conditional Diagram _ Mermaid Chart-2025-07-14-131805.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/71214119-b915-45af-a6de-fc0ef7a37d02_Conditional Diagram _ Mermaid Chart-2025-07-14-131805.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/9887364f-241f-4557-8e72-07cbe7aab125_Quach-Huu-Khang-CV.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/e068cfe7-21b9-4a3a-9e9a-6c67770ba7d8_Conditional Diagram _ Mermaid Chart-2025-07-14-131805.png" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Kdz198&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Kdz198/FileWave.git&quot;,
+    &quot;accountId&quot;: &quot;bdae0fb3-aeee-40a2-b327-e42342a994c8&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="30rp4ah3aQJKEQTrbWM6hCYGanF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.FileWaveApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Java/FileWave/Backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="FileWaveApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="FileWave" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="hoangtugio.org.filewave.FileWaveApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="397ce935-28b9-44ab-b73d-bd1781dd0704" name="Changes" comment="" />
+      <created>1754395356391</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1754395356391</updated>
+      <workItem from="1754395357524" duration="15448000" />
+      <workItem from="1754462299226" duration="30000" />
+    </task>
+    <task id="LOCAL-00001" summary="update gitignore">
+      <option name="closed" value="true" />
+      <created>1754411070635</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1754411070635</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="update gitignore" />
+  </component>
+</project>
