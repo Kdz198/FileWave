@@ -60,6 +60,11 @@ public class FileController {
         cloudinaryService.deleteFile(publicId, resource_type);
     }
 
+    @GetMapping("/health")
+    public String healthCheck() {
+        return "File service is running";
+    }
+
 
 
 //    @PostMapping
