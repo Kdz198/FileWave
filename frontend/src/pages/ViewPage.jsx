@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import * as pdfjsLib from 'pdfjs-dist';
 import Header from '../pages/Header';
 import Footer from '../pages/Footer';
+import React from 'react';
 
 // Configure pdf.js worker
 pdfjsLib.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
@@ -25,6 +26,7 @@ function ViewPage() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log('Form submitted with code:', code); // Debug
         if (!code.trim()) {
             setError('Please enter the file code.');
             return;
@@ -32,8 +34,6 @@ function ViewPage() {
 
         setFileInfo(null);
         setError(null);
-        // Close mobile menu after search
-        setIsMobileMenuOpen(false);
 
         try {
             const response = await fetch(`${import.meta.env.VITE_API_URL}/${code}`, {
@@ -50,7 +50,7 @@ function ViewPage() {
                 throw new Error('File information not found or invalid URL.');
             }
             setFileInfo(data);
-
+            setIsMobileMenuOpen(false); // Chỉ đóng menu khi submit thành công
         } catch (err) {
             console.error('File does not exist or has expired', err);
             setError('File does not exist or has expired');
@@ -105,6 +105,7 @@ function ViewPage() {
     };
 
     useEffect(() => {
+        //console.log('fileInfo changed:', fileInfo); // Debug
         if (fileInfo && isPDF(fileInfo.format) && fileInfo.url) {
             renderPDF(fileInfo.url);
         }
@@ -113,13 +114,19 @@ function ViewPage() {
     // Close mobile menu when clicking outside
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (isMobileMenuOpen && !event.target.closest('.mobile-sidebar') && !event.target.closest('.mobile-menu-button')) {
+            if (
+                isMobileMenuOpen &&
+                !event.target.closest('.mobile-sidebar') &&
+                !event.target.closest('.mobile-menu-button') &&
+                !event.target.closest('input') // Bỏ qua input
+            ) {
                 setIsMobileMenuOpen(false);
             }
         };
 
-        document.addEventListener('click', handleClickOutside);
-        return () => document.removeEventListener('click', handleClickOutside);
+        const eventType = 'ontouchstart' in window ? 'touchstart' : 'click';
+        document.addEventListener(eventType, handleClickOutside);
+        return () => document.removeEventListener(eventType, handleClickOutside);
     }, [isMobileMenuOpen]);
 
     const SidebarContent = () => (
@@ -129,10 +136,21 @@ function ViewPage() {
                 <h2 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">Enter File Code</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <input
+                        key="file-code-input"
                         type="text"
                         value={code}
-                        onChange={(e) => setCode(e.target.value)}
+                        onChange={(e) => {
+                            e.preventDefault();
+                            setCode(e.target.value);
+                        }}
+                        onKeyDown={(e) => {
+                            //console.log('Key pressed:', e.key); // Debug
+                            if (e.key === 'Enter') {
+                                e.preventDefault(); // Ngăn submit khi nhấn Enter
+                            }
+                        }}
                         placeholder="Enter file code..."
+                        autoFocus
                         className="w-full p-3 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
                     />
                     <button
