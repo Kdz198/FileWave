@@ -28,12 +28,15 @@ public class File {
     String format;
     String code;
     int expiredHour;
+    String publicId;
 
-    public File(String path, String type, String format, int expiredHour) {
+    public File(String path, String type, String format, int expiredHour, String publicId) {
         this.path = path;
         this.type = type;
         this.format = format;
         this.expiredHour = expiredHour;
-
+        this.publicId = publicId;
     }
+
+
 }

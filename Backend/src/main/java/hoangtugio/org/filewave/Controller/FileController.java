@@ -3,6 +3,7 @@ package hoangtugio.org.filewave.Controller;
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
 import hoangtugio.org.filewave.Model.File;
+import hoangtugio.org.filewave.Model.FileInfoDTO;
 import hoangtugio.org.filewave.Service.CloudinaryService;
 import hoangtugio.org.filewave.Service.FileService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,7 @@ import java.util.Map;
 import java.util.UUID;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class FileController {
 
     @Autowired
@@ -30,19 +32,32 @@ public class FileController {
     @Autowired
     private CloudinaryService cloudinaryService;
 
+
+
     @PostMapping
-    public String uploadFile(@RequestParam MultipartFile file, @RequestParam int expiredHour) throws IOException {
-        String url = cloudinaryService.uploadFile(file, expiredHour);
-        return url;
+    public FileInfoDTO uploadFile(@RequestParam MultipartFile file, @RequestParam int expiredHour) throws IOException {
+
+        FileInfoDTO fileInfoDTO = cloudinaryService.uploadFile(file, expiredHour);
+        if (fileInfoDTO == null) {
+            throw new IOException("File upload failed");
+        }
+        return fileInfoDTO;
+
     }
 
     @GetMapping("{code}")
-    public String viewFile (@PathVariable String code) {
+    public FileInfoDTO viewFile (@PathVariable String code) {
         File file = fileService.getFileByCode(code);
         if (file == null) {
-            return "File Not Found";
+            return null;
         }
-        return file.getPath();
+        FileInfoDTO fileInfoDTO = new FileInfoDTO(file.getPath(), file.getCode(), file.getFormat(), file.getCreatedAt(), file.getCreatedAt().plusHours(file.getExpiredHour()));
+        return fileInfoDTO;
+    }
+
+    @DeleteMapping()
+    public void deleteFile(@RequestParam String publicId, @RequestParam String resource_type) {
+        cloudinaryService.deleteFile(publicId, resource_type);
     }
 
 
