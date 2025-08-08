@@ -191,11 +191,11 @@ function UploadPage() {
                                     <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
                                         <span className="text-white font-bold">F</span>
                                     </div>
-                                    <span className="text-2xl font-bold text-gray-800 dark:text-white">FileTransfer.io</span>
+                                    <span className="text-2xl font-bold text-gray-800 dark:text-white">FileWave</span>
                                     <span className="text-gray-500 dark:text-gray-400 mx-2">by</span>
                                     <div className="flex items-center space-x-1">
                                         <div className="w-5 h-5 bg-green-500 rounded-full"></div>
-                                        <span className="font-medium text-gray-700 dark:text-gray-300">LimeWire</span>
+                                        <span className="font-medium text-gray-700 dark:text-gray-300">Hoàng Tử Gió</span>
                                     </div>
                                 </div>
                             </div>
