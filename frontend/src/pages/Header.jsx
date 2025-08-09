@@ -107,7 +107,7 @@ function Header() {
                                 className="md:hidden p-2 rounded-lg text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                                 aria-label="Toggle mobile menu"
                             >
-                                ortality
+
                                 {isMobileMenuOpen ? (
                                     <FaTimes className="w-5 h-5" />
                                 ) : (
