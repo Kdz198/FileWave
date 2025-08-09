@@ -39,6 +39,16 @@ function UploadPage() {
         setProgress(0);
     };
 
+    const handleDragOver = (e) => {
+        e.preventDefault();
+        setIsDragging(true);
+    };
+
+    const handleDragLeave = (e) => {
+        e.preventDefault();
+        setIsDragging(false);
+    };
+
     const handleDrop = (e) => {
         e.preventDefault();
         setIsDragging(false);
@@ -120,13 +130,29 @@ function UploadPage() {
                             Simple and reliable<br />
                             file transfers
                         </h1>
-                        <button
-                            onClick={() => fileInputRef.current?.click()}
-                            className="bg-green-500 hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center mx-auto space-x-2 shadow-lg"
+                        <div
+                            className={`relative border-2 border-dashed rounded-2xl p-8 transition-colors duration-200 ${
+                                isDragging
+                                    ? 'border-green-500 bg-green-50 dark:bg-green-900/20'
+                                    : 'border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800'
+                            }`}
+                            onDragOver={handleDragOver}
+                            onDragLeave={handleDragLeave}
+                            onDrop={handleDrop}
                         >
-                            <span className="text-xl">📁</span>
-                            <span>Send files</span>
-                        </button>
+                            <div className="flex flex-col items-center space-y-4">
+                                <p className="text-gray-600 dark:text-gray-400 text-lg">
+                                    {isDragging ? 'Thả file vào đây!' : 'Kéo và thả file hoặc nhấn để chọn'}
+                                </p>
+                                <button
+                                    onClick={() => fileInputRef.current?.click()}
+                                    className="bg-green-500 hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center space-x-2 shadow-lg"
+                                >
+                                    <span className="text-xl">📁</span>
+                                    <span>Send files</span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 p-12 mb-16">
                         <div className="grid md:grid-cols-3 gap-12">
