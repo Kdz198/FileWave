@@ -5,11 +5,12 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 function Header() {
     const location = useLocation();
     const [isDark, setIsDark] = useState(() => {
-        // Check localStorage on init
+        // Check localStorage on init, default to true (dark mode) if no preference is set
         if (typeof window !== 'undefined') {
-            return localStorage.getItem('theme') === 'dark';
+            const savedTheme = localStorage.getItem('theme');
+            return savedTheme ? savedTheme === 'dark' : true;
         }
-        return false;
+        return true;
     });
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -106,6 +107,7 @@ function Header() {
                                 className="md:hidden p-2 rounded-lg text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                                 aria-label="Toggle mobile menu"
                             >
+                                ortality
                                 {isMobileMenuOpen ? (
                                     <FaTimes className="w-5 h-5" />
                                 ) : (
